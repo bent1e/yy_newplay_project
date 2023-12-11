@@ -12,6 +12,7 @@
 - `gallery_data/`：用于玩法识别的检索库数据
 
 ### 使用说明
+1、环境配置requirements.txt
 1. 如有需要，运行 `mae_pretrain.py` 对模型进行训练，模型结果将保存在checkpoints。
 2. 模型推理请运行 `second_val.py` 对模型进行验证，检测模型对玩法的识别效果。
 
