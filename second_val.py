@@ -27,8 +27,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=100)
     parser.add_argument('--val_batch_size', type=int, default=1)
-    parser.add_argument('--model_path', type=str, default='/data1/zhuzhipeng/yy_newplay/checkpoints/mae/V2.0.0_V5.0.0/epoch_48.pth')
-    parser.add_argument('--gallery_path', type=str, default=['/data1/zhuzhipeng/yy_newplay/MAE/small_game_val.txt'])
+    parser.add_argument('--model_path', type=str, default='./checkpoints/epoch_48.pth')
+    parser.add_argument('--gallery_path', type=str, default=['./small_game_vals.txt'])
     parser.add_argument('--test_path', type=str, default=['/data1/zhuzhipeng/yy_newplay/MAE/new_game_test.txt'])
     args = parser.parse_args()
 
