@@ -11,9 +11,15 @@
 - `checkpoints/`：模型训练过程中的保存的检查点
 - `gallery_data/`：用于玩法识别的检索库数据
 
-### 使用说明
+### 基本使用说明
 - 1. 环境配置`requirements.txt`
 - 2. 如有需要，运行 `mae_pretrain.py` 对模型进行训练，模型结果将保存在checkpoints。
 - 3. 模型推理请运行 `second_val.py` 对模型进行验证，检测模型对玩法的识别效果。
 
-
+### 模型推理说明
+- 1. `--batch_size` 对于检索库图中提取的图像批次数，默认=100
+- 2. `--val_batch_size` 对于待识别图中提取的图像批次数，默认=1
+- 3. `--model_path` 模型文件位置，默认`./checkpoints/epoch_48.pth`
+- 4. `--gallery_path`检索库位置
+- 5. `--test_path` 待检索图像文件描述，是一个txt，每行代表图像地址，如/data1/zhuzhipeng/yy_newplay/data/small_new_game/1354946443_2712473029_2b4e954a-8271-4b6f-a481-502e7542f36b.jpg
+* 模型先对于检索库的图像进行特征提取，并保存为中间变量，再对每一张待识别样例进行特征提取并检索（二次检索），生成待识别图像的label（1=玩法，0=非玩法）
