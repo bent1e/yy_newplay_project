@@ -6,7 +6,7 @@
 
 ### 项目文件结构
 - `model.py`：MAE模型构建和特征提取网络实现
-- `mae+pretrain.py`：模型训练脚本
+- `mae_pretrain.py`：模型训练脚本
 - `second_val.py`：模型验证脚本
 - `checkpoints/`：模型训练过程中的保存的检查点
 - `gallery_data/`：用于玩法识别的检索库数据
